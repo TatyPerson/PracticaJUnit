@@ -46,11 +46,11 @@ public class TestRunner {
 
 ### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
-## JUnit tests cases @Before, @After annotations
+## JUnit tests cases @Before, @BeforeClass annotations
 
 ## 1) Crear proyecto, añadir librerias JUnit y JRE
 
-## 2) Definición de etiquetas
+## 2) Definición de etiquetas @Before, @BeforeClass
 
 @BeforeClass: El método al que etiqueta debe ejecutarse antes del resto de los métodos de prueba de la clase.
 
