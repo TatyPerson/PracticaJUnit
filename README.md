@@ -202,4 +202,73 @@ public class TestRunner {
 
 ### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
+## JUnit Assert & AssertEquals
+
+### 1) Crear proyecto, añadir librerias JUnit y JRE
+
+### 2) Crear fichero "JUnitTest.java" 
+
+```
+
+package es.uca.junit;		
+
+import static org.junit.Assert.*;				
+import org.junit.Test;		
+
+
+public class JUnitTest {				
+
+    @Test		
+    public void testAssert(){					
+        		
+        //Variable declaration		
+        String string1="Junit";					
+        String string2="Junit";					
+        String string3="test";					
+        String string4="test";					
+        String string5=null;					
+        int variable1=1;					
+        int	variable2=2;					
+        int[] airethematicArrary1 = { 1, 2, 3 };					
+        int[] airethematicArrary2 = { 1, 2, 3 };					
+        		
+        //Assert statements		
+        assertEquals(string1,string2);					
+        assertSame(string3, string4);					
+        assertNotSame(string1, string3);					
+        assertNotNull(string1);			
+        assertNull(string5);			
+        assertTrue(variable1<variable2);					
+        assertArrayEquals(airethematicArrary1, airethematicArrary2);					
+    }		
+}		
+
+```
+
+### 3) Crear fichero "TestRunner.java"
+
+```
+
+package es.uca.junit;
+
+import org.junit.runner.JUnitCore;		
+import org.junit.runner.Result;		
+import org.junit.runner.notification.Failure;		
+
+public class TestRunner {				
+			public static void main(String[] args) {									
+      Result result = JUnitCore.runClasses(JUnitTest.class);					
+			for (Failure failure : result.getFailures()) {							
+         System.out.println(failure.toString());					
+      }		
+      System.out.println("Result=="+result.wasSuccessful());							
+   }		
+} 
+
+```
+
+
+
+
+
 
