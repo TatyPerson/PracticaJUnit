@@ -28,6 +28,7 @@ public class TestJunit {
 
 ### 4) Crear clase java "TestRunner.java" para ejecutar las pruebas
 
+```
 package es.uca.junit;
 
 import org.junit.runner.JUnitCore;
@@ -43,5 +44,6 @@ public class TestRunner {
       System.out.println("Result=="+result.wasSuccessful());
    }
 } 
+```
 
 ### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
