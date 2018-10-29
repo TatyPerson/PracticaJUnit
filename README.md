@@ -6,9 +6,7 @@
 
 https://www.eclipse.org/downloads/packages/release/neon/3/eclipse-ide-java-ee-developers
 
-### 2) Descargar JUnit (junit.jar)
-
-https://junit.org/junit4/
+### 2) Crear proyecto, añadir librerías JUnit y JDK.
 
 ### 3) Crear clase java "TestJUnit.java"
 
