@@ -52,9 +52,9 @@ public class TestRunner {
 
 ## 2) Definición de etiquetas
 
-@Before: El método al que etiqueta debe ejecutarse antes del resto de los métodos de prueba de la clase.
+@BeforeClass: El método al que etiqueta debe ejecutarse antes del resto de los métodos de prueba de la clase.
 
-@BeforeClass: El método estático al que etiqueta debe ejecutarse una vez antes del resto de los métodos de prueba de la clase.
+@Before: El método estático al que etiqueta debe ejecutarse una vez antes del resto de los métodos de prueba de la clase.
 
 ## 3) Crear fichero "JUnit Test" 
 
