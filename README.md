@@ -12,6 +12,7 @@ https://junit.org/junit4/
 
 ### 3) Crear clase java "TestJUnit.java"
 
+```
 package es.uca.junit;
    
 import org.junit.Test;
@@ -23,6 +24,7 @@ public class TestJunit {
       assertEquals("I am done with Junit setup",str);
    }
 }
+```
 
 ### 4) Crear clase java "TestRunner.java" para ejecutar las pruebas
 
