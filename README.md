@@ -98,11 +98,11 @@ public class JUnitTest {
 
 ## JUnit test cases more annotations
 
-## 1) Crear proyecto, añadir librerias JUnit y JRE
+### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-## 2) Definición de etiquetas
+### 2) Definición de etiquetas
 
-## 3) Crear fichero "JUnitTest" 
+### 3) Crear fichero "JUnitTest" 
 
 ```
 package es.uca.junit;		
@@ -170,6 +170,24 @@ public class JUnitTest {
 }
 ```
 
-## 4) Crear fichero "TestRunner"
+### 4) Crear fichero "TestRunner"
+
+```
+package es.uca.junit;
+
+import org.junit.runner.JUnitCore;		
+import org.junit.runner.Result;		
+import org.junit.runner.notification.Failure;		
+
+public class TestRunner {				
+			public static void main(String[] args) {									
+      Result result = JUnitCore.runClasses(JUnitTest.class);					
+			for (Failure failure : result.getFailures()) {							
+         System.out.println(failure.toString());					
+      }		
+      System.out.println("Result=="+result.wasSuccessful());							
+   }		
+} 
+
 
 
