@@ -102,6 +102,16 @@ public class JUnitTest {
 
 ### 2) Definición de etiquetas
 
+@AfterClass: El método al que etiqueta debe ejecutarse después del resto de los métodos de prueba de la clase.
+
+@After: El método estático al que etiqueta debe ejecutarse una vez después del resto de los métodos de prueba de la clase.
+
+@Ignore: El método al que etiqueta será ignorado durante la ejecución.
+
+@Test(timeout = 10): El método al que etiqueta deberá ejecutarse en el tiempo establecido como máximo.
+
+@Test(expected = NoSuchMethodException.class): El método al que etiqueta comprobará si se ha lanzado una excepción del tipo indicado durante la prueba.
+
 ### 3) Crear fichero "JUnitTest" 
 
 ```
