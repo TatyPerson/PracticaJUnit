@@ -401,5 +401,30 @@ public class TestRunner {
 ### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
+## JUnit using Ignore annotation with condition
 
+### 1) Podemos añadir un mensaje sobre el motivo por el que se ignora el test en cuestión
 
+```
+@Ignore("Ignorar para esta version")		
+    @Test		
+    public void testSuma() {					
+
+        System.out.println("Comprobando suma (a+b)");					
+        assertEquals(suma, 9);					
+
+    }
+```
+
+## JUnit using Ignore annotation with all methods
+
+### 1) Podemos ignorar la ejecución de todos los métodos de la clase con ignore
+
+```
+..
+@Ignore
+public class JUnitTest {
+...
+```
+
+## JUnit
