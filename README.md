@@ -446,7 +446,7 @@ public class JUnitTest {
     @Test		
     public void testSaludo1() {					
 
-        System.out.println("Logintud saludo 1: ");					
+        System.out.println("Longitud saludo 1: ");					
         System.out.println(saludo.length());					
 
     }		
@@ -481,3 +481,61 @@ public class TestRunner {
 ```
 
 ### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+
+## JUnit using ErrorCollector
+
+### 1) Crear proyecto, añadir librerias JUnit y JRE
+
+### 2) Crear fichero "JUnitTest.java" 
+
+```
+
+package es.uca.junit;
+
+import org.junit.Assert;		
+import org.junit.Rule;		
+import org.junit.Test;		
+import org.junit.rules.ErrorCollector;		
+
+public class JUnitTest {				
+    @Rule		
+    public ErrorCollector collector = new ErrorCollector();							
+
+    @Test		
+    public void example() {					
+    collector.addError(new Throwable("There is an error in first line"));							
+    collector.addError(new Throwable("There is an error in second line"));							
+
+        System.out.println("Hello");					
+        try {			
+            Assert.assertTrue("A " == "B");					
+        } catch (Throwable t) {					
+            collector.addError(t);					
+        }		
+        System.out.println("World!!!!");					
+    }		
+}
+```
+
+### 3) Crear fichero "TestRunner.java" 
+
+```
+package es.uca.junit;
+
+import org.junit.runner.JUnitCore;		
+import org.junit.runner.Result;		
+import org.junit.runner.notification.Failure;		
+
+public class TestRunner {				
+			public static void main(String[] args) {									
+      Result result = JUnitCore.runClasses(JUnitTest.class);					
+			for (Failure failure : result.getFailures()) {							
+         System.out.println(failure.toString());					
+      }		
+      System.out.println("Result=="+result.wasSuccessful());							
+   }		
+}  
+```
+
+### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+
