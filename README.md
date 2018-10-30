@@ -6,9 +6,9 @@
 
 https://www.eclipse.org/downloads/packages/release/neon/3/eclipse-ide-java-ee-developers
 
-### 2) Crear proyecto, añadir librerías JUnit y JRE
+#### 2) Crear proyecto, añadir librerías JUnit y JRE
 
-### 3) Crear clase java "TestJUnit.java"
+#### 3) Crear clase java "TestJUnit.java"
 
 ```
 package es.uca.junit;
@@ -24,7 +24,7 @@ public class TestJunit {
 }
 ```
 
-### 4) Crear clase java "TestRunner.java" para ejecutar las pruebas
+#### 4) Crear clase java "TestRunner.java" para ejecutar las pruebas
 
 ```
 package es.uca.junit;
@@ -44,19 +44,19 @@ public class TestRunner {
 } 
 ```
 
-### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit tests cases @Before, @BeforeClass annotations
 
-## 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-## 2) Definición de etiquetas @Before, @BeforeClass
+#### 2) Definición de etiquetas @Before, @BeforeClass
 
 @BeforeClass: El método al que etiqueta debe ejecutarse antes del resto de los métodos de prueba de la clase.
 
 @Before: El método estático al que etiqueta debe ejecutarse una vez antes del resto de los métodos de prueba de la clase.
 
-## 3) Crear fichero "JUnitTest" 
+#### 3) Crear fichero "JUnitTest" 
 
 ```
 package es.uca.junit;
@@ -94,13 +94,13 @@ public class JUnitTest {
 }
 ```
 
-### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit test cases more annotations
 
-### 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-### 2) Definición de etiquetas
+#### 2) Definición de etiquetas
 
 @AfterClass: El método al que etiqueta debe ejecutarse después del resto de los métodos de prueba de la clase.
 
@@ -112,7 +112,7 @@ public class JUnitTest {
 
 @Test(expected = NoSuchMethodException.class): El método al que etiqueta comprobará si se ha lanzado una excepción del tipo indicado durante la prueba.
 
-### 3) Crear fichero "JUnitTest" 
+#### 3) Crear fichero "JUnitTest" 
 
 ```
 package es.uca.junit;		
@@ -180,7 +180,7 @@ public class JUnitTest {
 }
 ```
 
-### 4) Crear fichero "TestRunner"
+#### 4) Crear fichero "TestRunner"
 
 ```
 package es.uca.junit;
@@ -200,13 +200,13 @@ public class TestRunner {
 } 
 ```
 
-### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit Assert & AssertEquals
 
-### 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-### 2) Crear fichero "JUnitTest.java" 
+#### 2) Crear fichero "JUnitTest.java" 
 
 ```
 
@@ -245,7 +245,7 @@ public class JUnitTest {
 
 ```
 
-### 3) Crear fichero "TestRunner.java"
+#### 3) Crear fichero "TestRunner.java"
 
 ```
 
@@ -267,14 +267,14 @@ public class TestRunner {
 
 ```
 
-### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
 ## JUnit Test Suite
 
-### 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-### 2) Crear fichero "JUnitTest.java" 
+#### 2) Crear fichero "JUnitTest.java" 
 
 ```
 package es.uca.junit;
@@ -293,7 +293,7 @@ public class JUnitTest {
 }
 ```
 
-### 3) Crear fichero "SuiteTest1.java" 
+#### 3) Crear fichero "SuiteTest1.java" 
 
 ```
 package es.uca.junit;
@@ -312,7 +312,7 @@ public class SuiteTest1 {
 }
 ```
 
-### 4) Crear fichero "SuiteTest2.java" 
+#### 4) Crear fichero "SuiteTest2.java" 
 
 ```
 package es.uca.junit;
@@ -336,13 +336,13 @@ public class SuiteTest2 {
 }
 ```
 
-### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit using Ignore annotation
 
-### 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-### 2) Crear fichero "JUnitTest.java" 
+#### 2) Crear fichero "JUnitTest.java" 
 
 ```
 package es.uca.junit;		
@@ -377,7 +377,7 @@ public class JUnitTest {
 }
 ```
 
-### 3) Crear fichero "TestRunner.java" 
+#### 3) Crear fichero "TestRunner.java" 
 
 ```
 package es.uca.junit;
@@ -398,12 +398,12 @@ public class TestRunner {
 
 ```
 
-### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
 ## JUnit using Ignore annotation with condition
 
-### 1) Podemos añadir un mensaje sobre el motivo por el que se ignora el test en cuestión
+#### 1) Podemos añadir un mensaje sobre el motivo por el que se ignora el test en cuestión
 
 ```
 @Ignore("Ignorar para esta version")		
@@ -418,7 +418,7 @@ public class TestRunner {
 
 ## JUnit using Ignore annotation with all methods
 
-### 1) Podemos ignorar la ejecución de todos los métodos de la clase con ignore
+#### 1) Podemos ignorar la ejecución de todos los métodos de la clase con ignore
 
 ```
 ..
@@ -429,9 +429,9 @@ public class JUnitTest {
 
 ## JUnit expected exception
 
-### 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-### 2) Crear fichero "JUnitTest.java" 
+#### 2) Crear fichero "JUnitTest.java" 
 
 ```
 package es.uca.junit;		
@@ -459,7 +459,7 @@ public class JUnitTest {
 }
 ```
 
-### 3) Crear fichero "TestRunner.java" 
+#### 3) Crear fichero "TestRunner.java" 
 
 ```
 package es.uca.junit;
@@ -480,13 +480,13 @@ public class TestRunner {
 
 ```
 
-### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit using ErrorCollector
 
-### 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-### 2) Crear fichero "JUnitTest.java" 
+#### 2) Crear fichero "JUnitTest.java" 
 
 ```
 
@@ -517,7 +517,7 @@ public class JUnitTest {
 }
 ```
 
-### 3) Crear fichero "TestRunner.java" 
+#### 3) Crear fichero "TestRunner.java" 
 
 ```
 package es.uca.junit;
@@ -537,13 +537,13 @@ public class TestRunner {
 }  
 ```
 
-### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit Parameterized Test
 
-### 1) Crear proyecto, añadir librerias JUnit y JRE
+#### 1) Crear proyecto, añadir librerias JUnit y JRE
 
-### 2) Crear fichero "JUnitTest.java" 
+#### 2) Crear fichero "JUnitTest.java" 
 
 ```
 package es.uca.junit;
@@ -584,5 +584,5 @@ public class JUnitTest {
 
 ```
 
-### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
