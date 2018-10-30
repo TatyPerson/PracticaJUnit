@@ -24,27 +24,7 @@ public class TestJunit {
 }
 ```
 
-#### 4) Crear clase java "TestRunner.java" para ejecutar las pruebas
-
-```
-package es.uca.junit;
-
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
-
-public class TestRunner {
-   public static void main(String[] args) {
-      Result result = JUnitCore.runClasses(TestJunit.class);
-      for (Failure failure : result.getFailures()) {
-         System.out.println(failure.toString());
-      }
-      System.out.println("Result=="+result.wasSuccessful());
-   }
-} 
-```
-
-#### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit tests cases @Before, @BeforeClass annotations
 
@@ -180,27 +160,7 @@ public class JUnitTest {
 }
 ```
 
-#### 4) Crear fichero "TestRunner"
-
-```
-package es.uca.junit;
-
-import org.junit.runner.JUnitCore;		
-import org.junit.runner.Result;		
-import org.junit.runner.notification.Failure;		
-
-public class TestRunner {				
-			public static void main(String[] args) {									
-      Result result = JUnitCore.runClasses(JUnitTest.class);					
-			for (Failure failure : result.getFailures()) {							
-         System.out.println(failure.toString());					
-      }		
-      System.out.println("Result=="+result.wasSuccessful());							
-   }		
-} 
-```
-
-#### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit Assert & AssertEquals
 
@@ -245,29 +205,7 @@ public class JUnitTest {
 
 ```
 
-#### 3) Crear fichero "TestRunner.java"
-
-```
-
-package es.uca.junit;
-
-import org.junit.runner.JUnitCore;		
-import org.junit.runner.Result;		
-import org.junit.runner.notification.Failure;		
-
-public class TestRunner {				
-			public static void main(String[] args) {									
-      Result result = JUnitCore.runClasses(JUnitTest.class);					
-			for (Failure failure : result.getFailures()) {							
-         System.out.println(failure.toString());					
-      }		
-      System.out.println("Result=="+result.wasSuccessful());							
-   }		
-} 
-
-```
-
-#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
 ## JUnit Test Suite
@@ -377,28 +315,7 @@ public class JUnitTest {
 }
 ```
 
-#### 3) Crear fichero "TestRunner.java" 
-
-```
-package es.uca.junit;
-
-import org.junit.runner.JUnitCore;		
-import org.junit.runner.Result;		
-import org.junit.runner.notification.Failure;		
-
-public class TestRunner {				
-			public static void main(String[] args) {									
-      Result result = JUnitCore.runClasses(JUnitTest.class);				
-			for (Failure failure : result.getFailures()) {							
-         System.out.println(failure.toString());					
-      }		
-      System.out.println("Result=="+result.wasSuccessful());							
-   }		
-}   
-
-```
-
-#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
 ## JUnit using Ignore annotation with condition
@@ -459,28 +376,7 @@ public class JUnitTest {
 }
 ```
 
-#### 3) Crear fichero "TestRunner.java" 
-
-```
-package es.uca.junit;
-
-import org.junit.runner.JUnitCore;		
-import org.junit.runner.Result;		
-import org.junit.runner.notification.Failure;		
-
-public class TestRunner {				
-			public static void main(String[] args) {									
-      Result result = JUnitCore.runClasses(JUnitTest.class);				
-			for (Failure failure : result.getFailures()) {							
-         System.out.println(failure.toString());					
-      }		
-      System.out.println("Result=="+result.wasSuccessful());							
-   }		
-}   
-
-```
-
-#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit using ErrorCollector
 
@@ -517,27 +413,7 @@ public class JUnitTest {
 }
 ```
 
-#### 3) Crear fichero "TestRunner.java" 
-
-```
-package es.uca.junit;
-
-import org.junit.runner.JUnitCore;		
-import org.junit.runner.Result;		
-import org.junit.runner.notification.Failure;		
-
-public class TestRunner {				
-			public static void main(String[] args) {									
-      Result result = JUnitCore.runClasses(JUnitTest.class);					
-			for (Failure failure : result.getFailures()) {							
-         System.out.println(failure.toString());					
-      }		
-      System.out.println("Result=="+result.wasSuccessful());							
-   }		
-}  
-```
-
-#### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+#### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 ## JUnit Parameterized Test
 
