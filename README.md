@@ -270,6 +270,72 @@ public class TestRunner {
 ### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
+## JUnit Test Suite
 
+### 1) Crear proyecto, añadir librerias JUnit y JRE
+
+### 2) Crear fichero "JUnitTest.java" 
+
+```
+package es.uca.junit;
+	
+import org.junit.runner.RunWith;		
+import org.junit.runners.Suite;		
+
+@RunWith(Suite.class)				
+@Suite.SuiteClasses({				
+  SuiteTest1.class,
+  SuiteTest2.class,  			
+})		
+
+public class JUnitTest {				
+			// This class remains empty, it is used only as a holder for the above annotations		
+}
+```
+
+### 3) Crear fichero "SuiteTest1.java" 
+
+```
+package es.uca.junit;
+
+import static org.junit.Assert.assertEquals;				
+
+import org.junit.Test;		
+
+public class SuiteTest1 {				
+	 @Test
+	   public void testSetup() {
+	      String str= "I am done with Junit setup";
+	      assertEquals("I am done with Junit setup",str);
+	      System.out.println("Suite Test 1 is successful");
+	   }		
+}
+```
+
+### 4) Crear fichero "SuiteTest2.java" 
+
+```
+package es.uca.junit;
+
+import org.junit.Assert;		
+import org.junit.Test;		
+
+public class SuiteTest2 {				
+
+    @Test		
+    public void createAndSetName() {					
+        		
+
+        String expected = "Y";					
+        String actual = "Y";					
+
+        Assert.assertEquals(expected, actual);					
+        System.out.println("Suite Test 2 is successful " + actual);							
+    }		
+
+}
+```
+
+### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
