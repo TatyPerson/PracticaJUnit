@@ -267,6 +267,7 @@ public class TestRunner {
 
 ```
 
+### 4) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
 
 
