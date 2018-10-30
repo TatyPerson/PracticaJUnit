@@ -338,4 +338,68 @@ public class SuiteTest2 {
 
 ### 5) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
 
+## JUnit using Ignore annotation
+
+### 1) Crear proyecto, añadir librerias JUnit y JRE
+
+### 2) Crear fichero "JUnitTest.java" 
+
+```
+package es.uca.junit;		
+
+import static org.junit.Assert.assertEquals;				
+
+import org.junit.Ignore;		
+import org.junit.Test;		
+
+public class JUnitTest {				
+    
+    public int a = 4;
+    public int b = 5;	
+    
+    public int suma = a + b;
+
+    @Ignore		
+    @Test		
+    public void testSuma() {					
+
+        System.out.println("Comprobando suma (a+b)");					
+        assertEquals(suma, 9);					
+
+    }		
+
+    @Test		
+    public void testSuma5() {					
+        suma += 5;						
+        System.out.println("Modificando suma +5");					
+        assertEquals(suma, 14);					
+    }		
+}
+```
+
+### 2) Crear fichero "TestRunner.java" 
+
+```
+package es.uca.junit;
+
+import org.junit.runner.JUnitCore;		
+import org.junit.runner.Result;		
+import org.junit.runner.notification.Failure;		
+
+public class TestRunner {				
+			public static void main(String[] args) {									
+      Result result = JUnitCore.runClasses(JUnitTest.class);				
+			for (Failure failure : result.getFailures()) {							
+         System.out.println(failure.toString());					
+      }		
+      System.out.println("Result=="+result.wasSuccessful());							
+   }		
+}   
+
+```
+
+### 3) Ejecutar las pruebas (click derecho > Run As > JUnit Test)
+
+
+
 
